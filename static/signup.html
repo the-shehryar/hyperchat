@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/mini-images/AppIcon.svg">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <!-- <script type="module" src="./scripts/purify.min.js"></script> -->
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="confettisection">
+            <div class="image-elements-wrapper">
+                <img parallaxvalue = 2 class="sally-01" src="./assets/images/bg-images/Saly-1.png" alt="">
+                <!-- <img parallaxvalue = 1 class="sally-19" src="./assets/images/bg-images/Saly-19.png" alt=""> -->
+            </div>
+    </div>
+    <div class="formcontainer">
+        <div class="signupform">
+                <div class="introductory-section">
+                    <h1>Signup Now</h1>
+                    <h6>Already A Member? Go to <a href="/login">Login</a></h6>
+                </div>
+                <div class="error-box">
+                    <!-- <div class="error-dialog">Login has failed</div>
+                    <div class="error-dialog">Login has failed</div> -->
+                </div>
+            <div class="input-combo-container">
+                <div class="field-container">
+                    <label for="fisrtname">First Name</label>
+                    <input type="text" class="text-input-md" id="firstname">
+                </div>
+                <div class="field-container">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" class="text-input-md" id="lastname">
+                </div>
+            </div>
+           <div class="input-combo-container">
+            <div class="field-container">
+                <label for="username">Username</label>
+                <input type="text" class="text-input-md" id="username">
+            </div>
+            <div class="field-container">
+                <label for="dob">Date of Birth</label>
+                <input type="text" class="text-input-md" id="dob">
+            </div>
+           </div>
+            <div class="field-container">
+                <label for="email">Email</label>
+                <input type="text" class="text-input-md" id="email">
+                <div class="static-icon-space">
+                    <div class="icon-holder">
+                        <img class="static-icon" src="./assets/images/mini-images/e_email_letter_mail_icon.svg" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-combo-container">
+                <div class="field-container">
+                    <label for="password">Password</label>
+                    <input type="password" class="text-input-md" id="password">
+                    <div class="icon-space">
+                        <div class="icon-holder">
+                            <img  class="show-preview active-icon" src="./assets/images/mini-images/eye_view_see_look_icon-preview.svg" alt="" srcset="">
+                            <img  class="hide-preview" src="./assets/images/mini-images/eye_view_see_look_icon-hide.svg" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="field-container">
+                    <label for="confirmapassword">Confirm Password</label>
+                    <input type="password" class="text-input-md" id="confirmpassword">
+                    <div class="icon-space">
+                        <div class="icon-holder">
+                            <img class="show-preview active-icon" src="./assets/images/mini-images/eye_view_see_look_icon-preview.svg" alt="" srcset="">
+                            <img class="hide-preview" src="./assets/images/mini-images/eye_view_see_look_icon-hide.svg" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="confirm-button-wrapper">
+                <input id="registeration" type="submit" value="Register">
+            </div>
+            <p class="foot-note">Date Format : dd-mm-yyyy</p>
+        </div>
+    </div>
+    
+    </div>
+    <script type = "module" src="./scripts/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+
+// Global Styles
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+// Fonts Implementaion
+
+@font-face{
+    font-family: Poppins;
+    src: url("../assets/fonts/poppins-regular-webfont.woff2");
+}
+
+@font-face{
+    font-family: Avenir;
+    src: url("../assets/fonts/AvenirLTStd-Book.otf");
+    src: url("../assets/fonts/AvenirLTStd-Book.otf?#iefix");
+}
+
+
+body{
+    max-width: 100%;
+    // text-shadow: 1px 1px 1px rgba(0, 0, 0,.004);
+    position: relative;
+    font-family: Poppins;
+}
+
+
+
+@mixin media($args) {
+    @media screen and (max-width : $args){
+        @content;
+    }
+}
+@mixin mediaMin($args) {
+    @media screen and (min-width : $args){
+        @content;
+    }
+}
+
+$input-border : rgba(20, 16, 16, 0.4);
+$input-btn-bgc : #7070ff;
+$accent-color :    #13dabf ;//#44fac2  //#90dbc4 
+$active-btn-color : #5c3ec5;
+input {
+    outline: none;
+    margin: 10px;
+
+    &::-ms-reveal,
+      &::-ms-clear {
+        display: none;
+      }
+}
+input[type="submit"], input[type="button"]{
+    border: none;
+}
+
+.text-input-md{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-bottom: 2px $input-border solid;
+    // border-radius: 6px;
+    padding: 15px;
+    font-size: 16px; 
+}
+
+.action-input-md {
+    width: 220px;
+    height: 40px;
+    background: $input-btn-bgc;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+.nobars{
+    scrollbar-width : none;
+    -ms-overflow-style: none;
+
+        &::-webkit-scrollbar{
+            width: 0;
+            height: 0;
+        }
+}
+
+.native-button {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.ripples {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: rippleEffect 500ms ease-in-out forwards;
+}
+@keyframes rippleEffect {
+    0% {
+        width: 0px;
+        height: 0px;
+        background-color: #000000c0;
+        opacity: 0.7;
+    }
+    
+    100%{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(128, 128, 128);
+        opacity: 0;
+    }
+}
+
+@import './locomotive.css';
+@import 'home';
+@import 'forms';
+@import 'misc';
+@import 'dashboard';
+@import 'recovery';
+@import 'profile';
+@import 'semi-routes';
+@import 'feed';
+@import 'chatUI';
+@import 'models';

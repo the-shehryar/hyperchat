@@ -1,0 +1,262 @@
+.profiledata-content-wrapper {
+    width: 100%;
+    height: 100%;
+    background: white;
+    box-shadow: #0000000f 0px 0px 10px 4px;
+    border-right: #80808036  2px solid;
+    opacity: 0;
+
+    .profile-picture-wrapper {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 20px;
+        
+        .picture-container {
+            width: 110px;
+            height: 110px;
+            // border: 2px red solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: linear-gradient(116deg, #37dfc6, #ffa9a9, #4646ff);
+            
+            .picture-circle {
+                width: 90%;
+                height: 90%;
+                position: relative;
+                // background: green;
+                border-radius: 50%;
+                
+                
+                &::after {
+                    content: '+';
+                    position: absolute;
+                    bottom: 0%;
+                    right: 0%;
+                    background: rgb(38, 57, 228);
+                    width: 20px;
+                    height: 20px;
+                    padding: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                border-radius: 50%;
+                box-shadow:#0000002e 0px 5px 10px 4px;
+            }
+        }
+        }
+    }
+    .account-details-container {
+            width: 100%;
+            min-height: 80px;
+            // background: yellow;
+            .name-wrapper {
+                width: 100%;
+                height: auto;
+                padding: 0px;
+                font-size: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .username-wrapper {
+                width: 100%;
+                height: auto;
+                padding: 5px;
+                font-size: 16px;
+                display: flex;
+                color: gray;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    .account-statistics-container {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        // background: green;
+
+        .statistic-block{
+            width: 80px;
+            height: 80px;
+            // background: red;
+            text-align: center;
+
+            .block-heading {
+                width: 100%;
+                height: 20px;
+                font-size: 16px;
+                // background: green;
+            }
+            .block-number {
+                width: 100%;
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+                // background: yellow;
+            }
+        }
+    }
+    .action-block {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .user-action-btn {
+            width: 120px;
+            height: 38px;
+            background: transparent;
+            border: #dad6d6 2px solid;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 300ms ease, border 300ms ease, color 300ms ease;
+        }
+        .userexit-btn {
+            &:hover {
+                border: #ff3333 2px solid;
+                background: #ff3333;
+                color: white;
+            }
+        }
+        .editor-btn {
+            &:hover {
+                border: #2639e4 2px solid;
+                background: #2639e4;
+                color: white;
+            }
+        }
+    }    
+}
+
+
+
+.notificationsdata-content-wrapper {
+    width: 100%;
+    height: 100%;
+    box-shadow: #0000000f 0px 0px 10px 4px;
+    border-right: #80808036  2px solid;;
+    // background: green;
+    opacity: 0;
+    .wrapper-cancel-bar {
+        width: 100%;
+        height: 5%;
+        // background: black;
+    }
+    .notification-block-header {
+        width: 100%;
+        height: 10%;
+        // background: violet;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 20px;
+        font-size: 25px;
+        color: #2639e4;
+    }
+    .notification-operations-block {
+        width: 100%;
+        height : 5%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        // background: green;
+        .clear-notification-btn {
+            width: auto;
+            height: 100%;
+            background: transparent;
+            margin: 10px;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #2639e4;
+            cursor: pointer;
+        }
+    }
+
+    .notifications-container{
+        margin: 5px 0px;
+        width: 100%;
+        height: 80%;
+        overflow: scroll;
+
+        .notification-tile {
+            width: 100%;
+            height: 120px;
+            border-bottom: 3px solid #907b7b2b;
+            border-top: 3px solid #907b7b2b;
+            // padding: 5px 0px;
+            // background: red;
+            .notification-body {
+                width: 100%;
+                height: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .notification-textual-area{
+                    width: 70%;
+                    height: 100%;
+                    font-size: 14px;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    overflow: hidden;
+                    // background: red;
+                }
+                .notification-image-area{
+                    width: 30%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .notification-image-circle{
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        background: linear-gradient(115deg, #de21218a, #7abe98b8, #f0f9ff);
+                    }
+                }
+            }
+            .notification-foot {
+                width: 100%;
+                height: 20%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                
+                .notification-date-time {
+                    color: gray;
+                    width: auto;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    span {
+                        font-size: 14px;
+                        margin: 0px 5px;
+                        font-style: italic;
+                    }
+
+                }
+            }
+        }    
+    }
+}

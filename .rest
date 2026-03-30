@@ -1,0 +1,7 @@
+###
+POST http://localhost:5000/actions/recovery
+Content-Type: application/json
+
+{
+    "recovery_email" : "sherry@mail.com"
+}

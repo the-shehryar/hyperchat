@@ -1,0 +1,35 @@
+ul.loading-bars {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    
+    li {
+        margin: 0 2px;
+        width: 2px;
+        border-radius: 4px;
+        background-color: black;
+        animation: animate 0.8s infinite alternate;
+
+        &:nth-child(odd) {
+            height: 16px;
+            animation-delay: 0.6s;
+        }
+        
+        &:nth-child(even) {
+            height:4px;
+        }
+    }
+  }
+  
+  
+
+  
+  @keyframes animate {
+    from {
+      height: 0px;
+    }
+    to {
+      height: 16px;
+    }
+  }
+  

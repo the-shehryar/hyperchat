@@ -1,0 +1,190 @@
+footer {
+    width: 100%;
+    height: 350px;
+    // background: red;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    .angled-bg {
+        width: 120%;
+        height: 80%;
+        border-radius: 8px;
+        background: $active-btn-color;
+        position: absolute;
+        bottom: -2%;
+        left: 2%;
+        transform-origin: top left;
+        transform: rotate(5deg);
+        z-index: -1;
+    } 
+
+    .app-info-container {
+        width: 40%;
+        height: 100%;
+        // background: red;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+
+       .app-info-wrapper {
+           width: 100%;
+           height: 60%;
+        //    background: green;
+           padding-left: 50px;
+
+            .app-mark-holder {
+                width: 100%;
+                height: 100px;
+                font-size: 1.8rem;
+                font-weight: bolder;
+            }
+            .app-desc-holder {
+                width: 100%;
+                height: 100px;
+                font-size: .9rem;
+            }
+       }
+    }
+
+    .important-links-wrapper {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+
+        .onsite-links, .offsite-links{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-direction: column;
+            padding-bottom: 40px;
+
+            .link-wrapper-heading {
+                width: 100%;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.2rem;
+                font-weight: bolder;
+                color: white;
+                margin: 20px 0px;
+            }
+            .footer-link {
+                width: 100%;
+                height: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                text-decoration: none;
+                color: white;
+                font-size: .8rem;
+            }
+            .icons-bar {
+                width: 100%;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 30px;
+                    height: 30px;
+                    margin: 0px 10px;
+                    // background: red;
+                    img {
+                        height: 80%;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @include media(800px){
+        .angled-bg {
+            height: 100%;
+        }
+        height: auto;
+        flex-direction: column;
+
+        .app-info-container {
+            height: 300px;
+            width: 65%;
+            justify-content: center;
+            .app-info-wrapper {
+                padding-left: 0px;
+                .app-mark-holder{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .app-desc-holder{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+
+        .important-links-wrapper {
+            width: 100%;
+            height: 220px;
+
+            .onsite-links, .offsite-links {
+                justify-content: flex-start;
+            }
+        }
+    }
+
+    @include media(500px){
+        .angled-bg {
+            height: 100%;
+        }
+        height: auto;
+        flex-direction: column;
+
+        .app-info-container {
+            height: 300px;
+            width: 80%;
+            justify-content: center;
+            .app-info-wrapper {
+                .app-mark-holder{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .app-desc-holder{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                }
+            }
+        }
+
+        .important-links-wrapper {
+            width: 80%;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .onsite-links, .offsite-links {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+    }
+}

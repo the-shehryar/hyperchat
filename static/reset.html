@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/mini-images/AppIcon.svg">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <title>Password Reset</title>
+</head>
+<body>
+
+        <section id="reset-main">
+
+            <h1 id="reset-main-heading">Reset your account password.</h1>
+            <div id="reset-error-holder"></div>
+            <div class="field-container">
+                <label for="new-password">New Password</label>
+                <input type="password" class="text-input-md" id="new-password">
+                <div class="icon-space">
+                    <div class="icon-holder">
+                        <img  class="show-preview active-icon" src="/assets/images/mini-images/eye_view_see_look_icon-preview.svg" alt="" srcset="">
+                        <img  class="hide-preview" src="/assets/images/mini-images/eye_view_see_look_icon-hide.svg" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+            <div class="field-container">
+                <label for="new-password-confirm">Confirm Password</label>
+                <input type="password" class="text-input-md" id="new-password-confirm">
+                <div class="icon-space">
+                    <div class="icon-holder">
+                        <img  class="show-preview active-icon" src="/assets/images/mini-images/eye_view_see_look_icon-preview.svg" alt="" srcset="">
+                        <img  class="hide-preview" src="/assets/images/mini-images/eye_view_see_look_icon-hide.svg" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+    
+            <input type="submit" id="submit-reset-btn" value="Reset"/>
+
+        </section>
+    
+    <script src="/scripts/app.js"></script>
+</body>
+</html>

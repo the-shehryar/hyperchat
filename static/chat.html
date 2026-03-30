@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/mini-images/AppIcon.svg">
+    <link rel="stylesheet" href='./node_modules/swiper/swiper.min.css'>
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <title>Chatroom</title>
+</head>
+<body>
+    <div class="preview-model-container">
+        <div class="exit-preview-model">
+            <div class="exit-btn-container">
+                <img class="exit-preview-model-btn" src="./assets/images/mini-images/cross-black.svg" alt="">
+            </div>
+        </div>
+        <div class="preview-model-body swiper">
+            <div class="secondary-action-block">
+                <div class="secondary-send-btn">
+                    Send
+                </div>
+            </div>
+
+            <div class="swiper-wrapper">
+            </div>
+
+            <div class="swiper-button-next">
+                <p>NEXT</p>
+                <!-- <img src="../static/assets/images/mini-images/left-bar-trigger.svg" alt=""> -->
+            </div>
+            <div class="swiper-button-prev">
+                <p>PREV</p>
+                <!-- <img src="../static/assets/images/mini-images/right-bar-trigger.svg" alt=""> -->
+            </div>
+        </div>
+    </div>
+    <div class="custom-wrapper">
+        <div id="new-chat-model-container">
+            <div class="new-chat-model">
+                <div class="close-bar">
+                    <div id="close-chat-model-button">
+                        <img src="./assets/images/mini-images/cross-black.svg" alt="" srcset="">
+                    </div>
+                </div>
+                
+                <div id="model-friend-list" class="nobars">    
+                    
+                </div>
+            </div>
+        </div>
+        <div id="side-explorer">
+            <div class="action-menu">
+                 <div class="menu-tile native-button" data-tile-link="/profile">
+                     <div class="tile-icon">
+                         <div class="active-icon-indicator"></div>
+                         <img src="/assets/images/mini-images/default-profile.svg" alt="" srcset="">
+                     </div>
+                     <div class="tile-title">Account</div>
+                 </div>
+                 <div class="menu-tile native-button" data-tile-link="/chats">
+                     <div class="tile-icon">
+                         <div class="active-icon-indicator"></div>
+                         <img src="/assets/images/mini-images/message.svg" alt="" srcset="">
+                     </div>
+                     <div class="tile-title">Chats</div>
+                 </div>
+                 <!-- <div class="menu-tile native-button">
+                     <div class="tile-icon">
+                         <div class="active-icon-indicator"></div>
+                         <img src="/assets/images/mini-images/notification.svg" alt="" srcset="">
+                     </div>
+                     <div class="tile-title">Notifications</div>
+                 </div> -->
+                 <div class="menu-tile native-button" data-tile-link="/feed">
+                     <div class="tile-icon">
+                         <div class="active-icon-indicator"></div>
+                         <img src="/assets/images/mini-images/feed.svg" alt="" srcset="">
+                     </div>
+                     <div class="tile-title">Logout</div>
+                 </div>
+            </div>
+            <div class="secondary-menu">
+                <div class="menu-tile native-button" data-tile-link="/logout">
+                    <div class="tile-icon">
+                        <div class="active-icon-indicator"></div>
+                        <img src="/assets/images/mini-images/logout-icon.svg" alt="" srcset="">
+                    </div>
+                    <div class="tile-title">Logout</div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="expansion-container">
+            <div class="profiledata-content-wrapper">
+                
+                <div class="profile-picture-wrapper">
+                    <div class="picture-container">
+                        <div class="picture-circle"></div>
+                    </div>
+                </div>
+                
+                <div class="account-details-container">
+                    <div class="name-wrapper">Shehryar Mazhar</div>
+                    <div class="username-wrapper">@sherrix</div>
+                </div>
+                
+                <div class="account-statistics-container">
+                    <div class="statistic-block">
+                        <div class="block-heading post">Post</div>
+                        <div class="block-number post-count">10</div>
+                    </div>
+                    <div class="statistic-block">
+                        <div class="block-heading followers">Followers</div>
+                        <div class="block-number followers-count">52</div>
+                    </div>
+                    <div class="statistic-block">
+                        <div class="block-heading following">Following</div>
+                        <div class="block-number following-count">102</div>
+                    </div>
+                </div>
+
+                <div class="expansion-action-block">
+                    <div class="editor-btn user-action-btn">Edit</div>
+                    <div class="userexit-btn user-action-btn">Logout</div>
+                </div>
+            </div> 
+            <div class="notificationsdata-content-wrapper">
+                <div class="wrapper-cancel-bar"></div>
+                <div class="notification-block-header">
+                    Notifications
+                </div>
+                <div class="notification-operations-block">
+                    <div class="clear-notification-btn">Clear</div>
+                </div>
+                <div class="notifications-container nobars">
+                    <div class="notification-tile">
+                        <div class="notification-body">
+                            <div class="notification-image-area">
+                                <div class="notification-image-circle">
+
+                                </div>
+                            </div>
+                            <div class="notification-textual-area">
+                                Lorem ipsum dolor etur  elit. Ipsa magni pariatur est repre henderit moles tiae sint incch itecto labore?
+                            </div>
+                        </div>
+                        <div class="notification-foot">
+                            <div class="notification-date-time"><span>13-10-2021</span> <span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="chat-ui-wrapper nobars">
+            <div class="chat-room-left-sidebar">
+                <div class="chat-explorer-header">
+                    <div class="conversation-sidebar-heading">
+                        Conversations
+                    </div>
+                </div>
+                <div class="chat-toolbar">
+                    <div class="toolbar-header">TOOLBAR</div>
+                    <div class="toolbar-icons-container">
+                        <div class="toolbar-icon new-chat-button" id="add-new-chat">
+                            <img src="./assets/images/mini-images/cross-black.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="conversations-list">
+                </div>
+            </div>
+            
+            <div class="chat-environment-wrapper">
+                
+                <div id="targetSidebar">
+                    <div class="sidebar-profile-wrapper">
+                        <div class="sidebar-profile-image">
+                            <div class="target-profile-circle">
+                                <img src="./assets/images/bg-images/pexels-tuesday-temptation-3780104.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="sidebar-profile-text">
+                            <div class="profile-fullname">Mr Usman</div>
+                            <div class="profile-username">@usman</div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- <div class="left-bar-trigger">
+                    <img src="./assets/images/mini-images/left-bar-trigger.svg">
+                </div> -->
+                <div id="chat-splash-section">
+                    <h1>Start Connecting With Loved Ones</h1>
+                    <div id="chat-action-btn" class="new-chat-button">Chat Now</div>
+                </div>
+                <div class="chat nobars">
+                    <div class="chat-room-header">
+                        <div class="name-block profile-redirection-button">
+                            <div class="profile-header-circle">
+                                <img src="" alt="">
+                            </div>
+                            <div class="profile-overview">
+                                <div class="profile-name-value-container"></div>
+                                <div class="profile-current-status-indicator"></div>
+                            </div>
+                        </div>
+                        <div class="chat-room-header-command-block"></div>
+                    </div>
+                    <div class="chat-room nobars">
+                        <!-- <div class="user-message-wrapper image-message animate-user-message">
+                            <div class="user-msg">
+                                <div class="image-holder">
+                                    <img src="./assets/images/bg-images/cover.jpg" alt="">
+                                </div>
+                                <div></div>
+                                <div class="-msgdata"></div>
+                                <div class="-time"></div>
+                            </div>
+                        </div> -->
+                    </div>
+            </div>
+            <div class="action-block">
+                    
+                    <div class="file-picker-container">
+                        <div class="file-options-model">
+                            <div class="selectable-options-container gallery-picker" data-af=".jpg, .jpeg, .png, .mp4, .mkv, .mpeg, .tiff, .gif">
+                                <div class="option-icon-container tool-tip-holder">
+                                    <img src="/assets/images/mini-images/gallery.svg" alt="">
+                                </div>
+                                <div class="option-title">Gallery</div>
+                            </div>
+                            <div class="selectable-options-container document-picker" data-af=".pdf, .docx, .mobi, .csv">
+                                <div class="option-icon-container tool-tip-holder">
+                                    <img src="/assets/images/mini-images/document.svg" alt="">
+                                </div>
+                                <div class="option-title">Documents</div>
+                            </div>
+                            <div class="selectable-options-container audio-picker" data-af=".mp3, .m4a, .wav, .ogg">
+                                <div class="option-icon-container tool-tip-holder">
+                                    <img src="/assets/images/mini-images/music.svg" alt="">
+                                </div>
+                                <div class="option-title">Music</div>
+                            </div>
+                            <div class="selectable-options-container contact-picker" data-af=".csv">
+                                <div class="option-icon-container tool-tip-holder">
+                                    <img src="/assets/images/mini-images/contacts.svg" alt="">
+                                </div>
+                                <div class="option-title">Contacts</div>
+                            </div>
+                            <!-- <div class="selectable-options-container location" data-af="">
+                                <div class="option-icon-container tool-tip-holder">
+                                    <img src="/assets/images/mini-images/location.svg" alt="">
+                                </div>
+                                <div class="option-title">Location</div>
+                            </div> -->
+                        </div>
+                        <div id ="file-picker-trigger" class="icon-container tool-tip-holder">
+                            <div class="general-tool-tip">Choose</div>
+                            <img src="/assets/images/mini-images/attachment.svg" alt="" srcset="">
+                        </div>
+                        <input type="file" accept="" name="atttach-files" multiple  id="file-chooser">
+                    </div>
+                    <div contenteditable="true" class="nobars" id="write-msg-input"></div>
+                    <div id="send-msg" class="tool-tip-holder">
+                        <div class="general-tool-tip">Send</div>
+                        <img src="/assets/images/mini-images/send.svg" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+            
+
+    </div>    
+
+
+    
+    <script>
+
+        const input = document.getElementById('input');
+        const emojis = Array.from(document.querySelectorAll('.emoji'));
+      
+    
+      emojis.forEach (emoji =>{
+            emoji.addEventListener('click', e => {
+            console.log('Caret at: ', input.selectionStart)
+            console.log(input.value)
+            input.value = input.value + e.target.innerHTML
+          })
+    
+      })
+        </script>
+
+    
+    <script type = "module" src="/scripts/app.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "retron-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "Shehryar Mazhar",
+  "license": "ISC",
+  "dependencies": {
+    "@glidejs/glide": "^3.4.1",
+    "browser-image-compression": "^1.0.17",
+    "compress.js": "^1.2.2",
+    "cropperjs": "^1.5.12",
+    "dompurify": "^2.3.3",
+    "image-conversion": "^2.1.1",
+    "locomotive-scroll": "^4.1.4",
+    "swiper": "^7.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.16.0",
+    "babel-loader": "^8.2.3",
+    "webpack": "^5.67.0",
+    "webpack-cli": "^4.9.2"
+  }
+}

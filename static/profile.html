@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/mini-images/AppIcon.svg">
+    <title>Your Profile</title>
+    <link rel="stylesheet" href="stylesheets/cropper.min.css">
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <!-- <script type="module" src="/scripts/purify.min.js"></script> -->
+</head>
+<body>
+    <div class="cropper-model-holder">
+        <div class="cropper-model-wrapper">
+            <div class="cropper-model">
+                <div class="cropping-area">
+                    <div class="placeholder-text">
+                        Loading..
+                    </div>
+                    <img src="" alt="">
+                </div>
+                <div class="side-area">
+                    <div class="preview-label">Preview</div>
+                    <div class="preview">
+                        <div class="placeholder-text-preview">Loading Preview</div>
+                    </div>
+                    <div class="dimentions"></div>
+                </div>
+            </div>
+            <div class="cropper-model-action-box">
+                <!-- <div class="secondary-action-buttons">
+                    <div class="delete-avatar-button">
+                        <div class="delete-button-text">Delete Image</div>
+                        <div class="delete-button-icon"><img src="./assets/images/mini-images/delete.svg" alt="Delete Icon" srcset=""></div>
+                    </div>
+                </div> -->
+               <div class="primary-action-buttons">
+                    <div class="abort-upload-btn primary-action-btn">Cancel</div>
+                    <input type="submit" id='avatar-upload-btn' class="primary-action-btn" value="Crop & Upload" form="dp-uploader"> 
+               </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="custom-wrapper">
+        
+        <div id="side-explorer">
+            <div class="action-menu">
+                 <div class="menu-tile native-button" data-tile-link="/profile" >
+                     <div class="tile-icon">
+                         <div class="active-icon-indicator"></div>
+                         <img src="./assets/images/mini-images/default-profile.svg" alt="" srcset="">
+                     </div>
+                     <div class="tile-title">Account</div>
+                 </div>
+                 <div class="menu-tile native-button" data-tile-link="/chats">
+                     <div class="tile-icon">
+                         <div class="active-icon-indicator"></div>
+                         <img src="./assets/images/mini-images/message.svg" alt="" srcset="">
+                     </div>
+                     <div class="tile-title">Chats</div>
+                 </div>
+                 <!-- <div class="menu-tile native-button">
+                     <div class="tile-icon">
+                         <div class="active-icon-indicator"></div>
+                         <img src="./assets/images/mini-images/notification.svg" alt="" srcset="">
+                     </div>
+                     <div class="tile-title">Notifications</div>
+                 </div> -->
+                 <div class="menu-tile native-button" data-tile-link="/feed">
+                     <div class="tile-icon">
+                         <div class="active-icon-indicator"></div>
+                         <img src="./assets/images/mini-images/feed.svg" alt="" srcset="">
+                     </div>
+                     <div class="tile-title">Logout</div>
+                 </div>
+            </div>
+            <div class="secondary-menu">
+                <div class="menu-tile native-button" data-tile-link="/logout">
+                    <div class="tile-icon">
+                        <div class="active-icon-indicator"></div>
+                        <img src="/assets/images/mini-images/logout-icon.svg" alt="" srcset="">
+                    </div>
+                    <div class="tile-title">Logout</div>
+                </div>
+            </div>
+        </div>
+
+    <div class="content-holder nobars">
+            <div class="profile-editor nobars">
+
+                
+                <div class="profile-data nobars">
+                    <div class="profile-toolbar">
+                        <div class="toolbar-holder">
+                            <div class="toolbar-heading">Settings</div>
+                            <div class="toolbar-action-btns">
+                                <div class="edit-profile-btn">Edit Profile</div>
+                                <div class="edit-password-btn">Change Password</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="avatar-container">
+                        <div class="avatar-holder">
+                            <div class="avatar-circle">
+                                <img id="user-avatar" src="http://localhost:5000/profile/getUserAvatar" alt="">
+                            </div>
+                            <div class="edit-button-holder">
+                                <div class="upload-avatar-btn native-button">
+                                    <input type="file" name="avatar-upload" id="avatar-upload-input" accept=".jpg" style="display: none;">
+                                    <?xml version="1.0" ?><svg id="Layer_1" style="enable-background:new 0 0 24 24;" version="1.1" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M19.607,18.746c0,0.881-0.716,1.624-1.597,1.624H5.231c-0.881,0-1.597-0.743-1.597-1.624V5.967  c0-0.881,0.716-1.571,1.597-1.571h7.454V3.332H5.231c-1.468,0-2.662,1.168-2.662,2.636v12.778c0,1.468,1.194,2.688,2.662,2.688  h12.778c1.468,0,2.662-1.221,2.662-2.688v-7.428h-1.065V18.746z"/><path d="M20.807,3.17c-0.804-0.805-2.207-0.805-3.012,0l-7.143,7.143c-0.068,0.068-0.117,0.154-0.14,0.247L9.76,13.571  c-0.045,0.181,0.008,0.373,0.14,0.506c0.101,0.101,0.237,0.156,0.376,0.156c0.043,0,0.086-0.005,0.129-0.016l3.012-0.753  c0.094-0.023,0.179-0.072,0.247-0.14l7.143-7.143c0.402-0.402,0.624-0.937,0.624-1.506S21.21,3.572,20.807,3.17z M13.016,12.467  l-2.008,0.502l0.502-2.008l5.909-5.909l1.506,1.506L13.016,12.467z M20.054,5.428l-0.376,0.376l-1.506-1.506l0.376-0.376  c0.402-0.402,1.104-0.402,1.506,0c0.201,0.201,0.312,0.468,0.312,0.753C20.366,4.96,20.255,5.227,20.054,5.428z"/></svg>
+                                </div>
+                                <div class="delete-avatar-btn native-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" style="enable-background:new 0 0 64 64;" version="1.1" viewBox="0 0 64 64" xml:space="preserve"><style type="text/css">
+                                        .st0{fill:#000000;}
+                                    </style><g><g id="Icon-Trash" transform="translate(232.000000, 228.000000)"><polygon class="st0" id="Fill-6" points="-207.5,-205.1 -204.5,-205.1 -204.5,-181.1 -207.5,-181.1    "/><polygon class="st0" id="Fill-7" points="-201.5,-205.1 -198.5,-205.1 -198.5,-181.1 -201.5,-181.1    "/><polygon class="st0" id="Fill-8" points="-195.5,-205.1 -192.5,-205.1 -192.5,-181.1 -195.5,-181.1    "/><polygon class="st0" id="Fill-9" points="-219.5,-214.1 -180.5,-214.1 -180.5,-211.1 -219.5,-211.1    "/><path class="st0" d="M-192.6-212.6h-2.8v-3c0-0.9-0.7-1.6-1.6-1.6h-6c-0.9,0-1.6,0.7-1.6,1.6v3h-2.8v-3     c0-2.4,2-4.4,4.4-4.4h6c2.4,0,4.4,2,4.4,4.4V-212.6" id="Fill-10"/><path class="st0" d="M-191-172.1h-18c-2.4,0-4.5-2-4.7-4.4l-2.8-36l3-0.2l2.8,36c0.1,0.9,0.9,1.6,1.7,1.6h18     c0.9,0,1.7-0.8,1.7-1.6l2.8-36l3,0.2l-2.8,36C-186.5-174-188.6-172.1-191-172.1" id="Fill-11"/></g></g></svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="profile-info-holder">
+                            <div id="info-holder-col-1">
+                                <div id="profile-fullName"></div>
+                                <div id="profile-userName"></div>
+                                <!-- <div id="profile-stats">
+                                    <div class="stats-box">
+                                        <div class="stat-title">Followers</div>
+                                        <div class="stat-value">1000</div>
+                                    </div>
+                                    <div class="stats-box">
+                                        <div class="stat-title">Following</div>
+                                        <div class="stat-value">34</div>
+                                    </div>
+                                    <div class="stats-box">
+                                        <div class="stat-title">Stories</div>
+                                        <div class="stat-value">57</div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="institution-submission-model">
+                        <div class="submission-popup">
+                            <div class="close-bar">
+                                <div class="close-icon-holder">
+                                    <img src="./assets/images/mini-images/cross-black.svg" alt="" srcset="">
+                                </div>
+                            </div>
+                            <div class="field-container">
+                                <label for="add-institution-input" >Add Institution</label>
+                                <input type="text" class="text-input-md" id="add-institution-input">
+                            </div>
+                            <div class="institution-btn-holder">
+                                <div class="add-institution-btn">
+                                    Add
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="password-update-model">
+                        <div class="password-update-popup">
+                            <div class="close-bar">
+                                <div class="close-icon-holder">
+                                    <img src="./assets/images/mini-images/cross-black.svg" alt="" srcset="">
+                                </div>
+                            </div>
+                            <div class="field-container">
+                                <label for="confirm-password-input" >Current Password</label>
+                                <input type="text" class="text-input-md" id="current-password-input">
+
+                            </div>
+                            <div class="field-container">
+                                <label for="confirm-password-input" >New Password</label>
+                                <input type="text" class="text-input-md" id="new-password-input">
+
+                            </div>
+                            <div class="field-container">
+                                <label for="confirm-password-input" >Confirm Password</label>
+                                <input type="text" class="text-input-md" id="confirm-password-input">
+
+                            </div>
+                            <div class="password-btn-holder">
+                                <div class="confirm-password-btn">
+                                    Confirm
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="information-update-model ">
+                        <div class="info-column-container">
+                            <div class="info-column-01">
+                                <div class="column-first-header">
+                                    <div class="column-heading">General</div>
+                                    <div id="model-cancel-btn">
+                                        <img src="./assets/images/mini-images/cross-black.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="field-container">
+                                    <label for="username">Username</label>
+                                    <input id="profile-username" type="text" name="userName" class="text-input-md">
+                                </div>
+                                <div class="field-container">
+                                    <label for="fname">First Name</label>
+                                    <input id="profile-firstname" name="firstName" type="text" class="text-input-md">
+                                </div>
+                                <div class="field-container">
+                                    <label for="lname">Last Name</label>
+                                    <input id="profile-lastname" name="lastName" type="text" class="text-input-md">
+                                </div>
+                                <div class="field-container">
+                                    <label for="dob">Date of Birth</label>
+                                    <input id="profile-dob" type="text" name="dob" value="" class="text-input-md">
+                                </div>
+                                <div id="action-section-info-model">
+                                    <div id="save-changes-btn">
+                                        Update Profile
+                                    </div>
+                                </div>
+                                <!-- <div class="field-container">
+                                    <label for="city">Location/City</label>
+                                    <input id="profile-location" type="text" name="location" class="text-input-md">
+                                </div> -->
+                            </div>
+                           
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="general-info"></div>
+            </div>
+        </div>
+    </div>
+    
+        <!-- <script src="scripts/cropper.min.js"></script> -->
+        <script defer src="/scripts/app.js"></script>
+        <!-- <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWWqfoucNZfQM4dN5DUFMngEN3CwNqTAQ&libraries=places">
+        </script> -->
+</body>
+</html>

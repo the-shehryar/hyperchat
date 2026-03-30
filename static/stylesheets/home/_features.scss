@@ -1,0 +1,144 @@
+#features {
+    width: 100%;
+    height: 100vh;
+    // background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    .display-image {
+        width: 65%;
+        height: 100%;
+        overflow: hidden;
+        img {
+            min-width: 100%;
+            max-width: 120%;
+            min-height: 100%;
+            max-height: 120%;
+        }
+    }
+    .app-features-wrapper {
+        width: 35%;
+        height: 100%;
+        position: relative;
+        .app-features-container {
+            width: 100%;
+            height: 100%;
+            .app-name-container {
+                width: 100%;
+                height: 35%;
+                align-items: flex-end;
+                display: flex;
+                justify-content: center;
+
+                p {
+                    .app-tm {
+                        
+                        font-size: 1.5rem;
+                        font-weight: bolder;
+                    }
+                    .slogan {
+                        color: $active-btn-color;
+                        font-size: 1rem;
+                    } 
+                }
+            }
+
+            .app-features {
+                width: 100%;
+                height: 65%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+            }
+        }
+    }
+    
+    
+    @include media(1000px){
+        .app-features-wrapper {
+            margin-left: 50px;
+        }
+    }
+    @include media(800px){
+        flex-direction: column;
+        .display-image {
+            width: 100%;
+            height: 70%;
+        }
+        .app-features-wrapper {
+            height: 30%;
+            margin-left: 0px;
+
+            .app-features-container {
+                position: absolute;
+                width: 300px;
+                height: 450px;
+                background: white;
+                top: -350px;
+                left: calc((50vw - 350px)/2);
+                border-radius: 8px;
+                box-shadow: #0000001c 0px 0px 20px 5px;
+                .app-name-container {
+                    width: 100%;
+                    align-items: center;
+                    p {
+                        .app-tm {
+                            font-size: 1.2rem;
+                        }
+                        .slogan {
+                            font-size: .8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+li {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+
+    line-height: 30px;
+
+    list-style: none;
+
+
+    @include media(800px){
+        width: 250px;
+    }
+}
+
+li:before {
+    display: block;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+
+    vertical-align: middle;
+
+    background: url('../../assets/images/mini-images/list-icon-check.svg') no-repeat left center;
+    background-size: contain;
+
+    content: '';
+}

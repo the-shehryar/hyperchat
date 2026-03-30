@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="./assets/images/mini-images/AppIcon.svg">
+    <link rel="stylesheet" href="stylesheets/main.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <!-- <div class="black-overlay"></div> -->
+        <div class="confettisection">
+                <div class="image-elements-wrapper">
+                    <img parallaxvalue = 2 class="sally-02" src="./assets/images/bg-images/Saly-2.png" alt="">
+                    <img parallaxvalue = 1 class="sally-19" src="./assets/images/bg-images/Saly-19.png" alt="">
+                </div>
+        </div>
+    <div class="formcontainer">
+        <div class="loginform">
+            <div class="introductory-section">
+                <h1>Login To Your Account</h1>
+                <h6>Not A Member Yet? Go to <a href="/signup">Signup</a></h6>
+            </div>
+            <div class="error-box">
+                <!-- <div class="error-dialog">Login has failed</div>
+                <div class="error-dialog">Login has failed</div> -->
+            </div>
+            <div class="field-container">
+                <label for="username" >Username</label>
+                <input type="text" class="text-input-md" id="username">
+            </div>
+            <div class="field-container">
+                <label for="password">Password</label>
+                <input type="password" class="text-input-md" id="password">
+                <div class="icon-space">
+                    <div class="icon-holder">
+                        <img  class="show-preview active-icon" src="./assets/images/mini-images/eye_view_see_look_icon-preview.svg" alt="" srcset="">
+                        <img  class="hide-preview" src="./assets/images/mini-images/eye_view_see_look_icon-hide.svg" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="confirm-button-wrapper">
+                <input id="loginBtn" type="submit" value="Login">
+            </div>
+            <a href="/actions?type=recovery" id="password-recovery-link">Forget Password ??</a>
+        </div>
+    </div>
+    </div>
+    <script type = "module" src="./scripts/app.js"></script>
+</body>
+</html>

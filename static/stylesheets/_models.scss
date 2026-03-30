@@ -1,0 +1,207 @@
+$model-width : 70%;
+
+.preview-model-container{
+    // display: none;
+    width: 0;
+    height: 0;
+    transition: transform ease 300ms;
+    transform: scale(0);
+}
+.preview-model-show {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    background: #000000a6;
+    z-index: 110;
+    transform: scale(1);
+
+    .exit-preview-model {
+        width: $model-width;
+        height: 50px;
+        background: white;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        cursor: pointer;
+
+        .exit-btn-container {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px 20px;
+            user-select: none;
+            &:active { 
+                background: #f1f1f1;
+            }
+
+            img {
+                pointer-events: none;
+                width: 80%;
+                transform: rotate(45deg);
+            }
+        }
+
+    }
+    .preview-model-body{
+        width: $model-width;
+        max-width: 100%;
+        height: 80%;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        .secondary-action-block {
+            width: 200px;
+            height: 50px;
+            // background: red;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            position: absolute;
+            bottom: 5%;
+            right: 0%;
+            z-index: 200;
+            .secondary-send-btn {
+                cursor: pointer;
+                margin: 0px 20px;
+                width: auto;
+                padding: 10px 15px;
+                color: white;
+                width: 120px;
+                height: 45px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 6px;
+                background-color: $input-btn-bgc;
+                transition: background-color;
+                font-size: .8rem;
+                user-select: none;
+                &:active {
+                    background-color: $active-btn-color;
+                }
+            }
+    
+        }
+
+        .swiper-wrapper {
+            width: 100%;
+            height: 100%;
+            z-index: 111;
+            // background: red;
+            
+            .swiper-slide {
+                width: 100%;
+                height: 100%;
+                // display: flex;
+                // justify-content: center;
+                // align-items: center;
+                .preview-image-container {
+                    width: 100%;
+                    height: 85%;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: linear-gradient(166deg, #f7f7f700, #3c3c3c38);
+                    .preview-image {
+                        max-width: 100%;
+                        height: 100%;
+                        
+                    }   
+                }
+                .additional-message-wrapper {
+                    width: 100%;
+                    height: 15%;
+                    // background: red;
+                    position: relative;
+                    overflow: hidden;
+                    margin: 0px 20px;
+                    .input-fake-placeholder {
+                        margin: 0px 22px;
+                        height: 25px;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        top: calc(50% - 25px);
+                        font-size: .8rem;
+                        color: #d1cfcf;
+                    }
+                    .additional-message-input {
+                        position: absolute;
+                        top: 10%;
+                        width: 60%;
+                        min-height: 40px;
+                        max-height: 80%;
+                        max-height: auto;
+                        overflow-y: scroll;
+                        outline: none;
+                        font-size: 1.012rem;
+                        border: #efefef solid 2px;
+                        padding: 10px 10px 5px 10px;
+                        // margin-left: 10px;
+                        margin-bottom: 10px;
+                        border-radius: 6px;
+                        // background: green;
+                     }
+                }
+            }
+        }
+        .swiper-button-next, .swiper-button-prev {
+            width: 50px ;
+            height: 50px;
+            z-index: 120 !important;
+            position: absolute;
+            background: #ffffff;
+            border-radius: 6px;
+            box-shadow: #00000029 0px 0px 20px 3px;
+            top: 45%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: .8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #7070ff;
+            color: white;
+            
+            img {
+                height: 70% !important;
+            }
+            p {
+                pointer-events: none;
+            }
+        }
+        .swiper-button-next {
+            right: 2%;
+            background-image: none;
+        }
+        .swiper-button-prev {
+            // background-image: url('../assets/images/mini-images/left-bar-trigger.svg');
+            background-image: none;
+            left: 2%;
+        }
+        .swiper-button-disabled{
+            background: #fbfbfb;
+            color: gray;
+            // color: white;
+        }
+        
+    }
+
+
+    
+}

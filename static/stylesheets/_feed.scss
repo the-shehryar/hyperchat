@@ -1,0 +1,169 @@
+$explorer-width-desktops : 70px;
+$explorer-width-4kdesktops : 270px;
+$explorer-width-phones : 0px;
+
+#feed-holder {
+    width: calc(100% - 70px);
+    height: 100%;
+    background: white;
+    overflow: hidden;
+
+
+    .suggestion-list-header {
+        width: 100%;
+        height: 10vh;
+        // background: red;
+        // padding: 30px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 50px;
+        padding-left: 7%;
+        
+
+        .list-heading{
+            font-size: 2vw;
+            margin: 10px;
+
+
+        }
+        @include media(1000px) {
+            justify-content: center;
+            padding-left: 0%;
+            .list-heading {
+                font-size: 4vw;
+            }
+        }
+        @include media(500px) {
+            .list-heading {
+                font-size: 6vw;
+            }
+        }
+    }   
+
+    .suggestion-list-container {
+        width: 100%;
+        // height: ;
+        min-height: 90vh;
+        // background: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        overflow: hidden;
+
+        .suggestion-list {
+            width: 100%;
+            height: 90vh;
+            padding: 70px 0px;
+            // background: red;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-wrap: wrap;
+            overflow: scroll;
+            
+            .suggestion-card {
+                width: 180px;
+                height: 260px;
+                background: #f1faff;
+                border: 2px solid #d6d6d6;
+                border-radius: 6px;
+                margin: 5px 10px;
+                box-shadow: #00000014 12px 10px 14px 4px;
+
+                .profile-pic-container {
+                    width: 100%;
+                    height: 58%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .profile-circle {
+                        width: 77%;
+                        height: 85%;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        user-select: none;
+                        // background: url('../assets/images/bg-images/pexels-mnm-zameer-3308588.jpg');
+                        background-size: cover;
+                        img {
+                            min-width: 100%;
+                            max-width: 120%;
+                            min-height: 100%;
+                            max-height: 160%;
+                            pointer-events: none;
+                        }
+                    }
+                }
+                .profile-username {
+                    width: 90%;
+                    height: 12%;
+                    // background: green;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: .8rem;
+                    margin-left: 5%;
+                    overflow: hidden;
+                }
+                .suggestion-card-buttons {
+                    width: 100%;
+                    height: 30%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    .sc-follow-button, .sc-message-button, .sc-following-button {
+                        width: 80%;
+                        height: 30px;
+                        border-radius: 6px;
+                        margin: 5px 0px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 0.8rem;
+                        user-select: none;
+                    }
+                    .sc-follow-button {
+                        background: #7070ff;
+                        color: white;
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        
+                        &:active {
+                            background: hsla(240, 100%, 72%, 0.842);
+                        }
+                    }
+
+                    .sc-following-button {
+                        background: white !important;
+                        color: red !important;
+                        border: 2px solid #d6d6d6 !important;
+                    }
+                    .sc-message-button {
+                        border: 2px solid #d6d6d6 ;
+                        background-color: transparent;
+                        transition: background-color 300ms ease-in-out;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: #ebe8e8;
+                        }
+                        &:active {
+                            background-color: #c5bfbf;
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
+
+    @include mediaMin(2000px){
+        width: calc(100% - 270px);
+    }
+
+}
