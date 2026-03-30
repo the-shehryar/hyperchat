@@ -180,4 +180,4 @@ MIT — see [LICENSE](LICENSE) for details.
 **Shehryar Mazhar**
 React Native Developer · Former Logistics Operations Supervisor
 
-[LinkedIn](https://linkedin.com/in/isherriz) · [GitHub](https://github.com/isherriz)
+[LinkedIn](https://linkedin.com/in/isherriz) · [GitHub](https://github.com/the-shehryar)
