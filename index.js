@@ -17,7 +17,7 @@ let {parse} = require('url')
 
 // const conn = mongoose.connect(DATABASE_URL, {useUnifiedTopology : true, useNewUrlParser: true, useFindAndModify : false , replicaSet : "lester"})
 
-const conn = mongoose.connect(DATABASE_URL, {useUnifiedTopology : true, useNewUrlParser: true, useFindAndModify : false})
+const conn = mongoose.connect(DATABASE_URL)
 const database = mongoose.connection
 const http = require('http')
 const server = http.createServer()

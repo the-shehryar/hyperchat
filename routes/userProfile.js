@@ -10,7 +10,6 @@ const mongoose = require('mongoose')
 const router = express.Router()
 const multer = require('multer')
 const GridFsStorage = require('multer-gridfs-storage')
-const MulterSharpResizer = require('multer-sharp-resizer')
 const database = mongoose.connection
 const path = require('path')
 const crypto = require('crypto')
@@ -52,8 +51,6 @@ function isNotFaulty(element){
 
 
 //? Multer Call Function 
-
-
 
 
 router.get('/', router_external_protection, (req,res) => {
